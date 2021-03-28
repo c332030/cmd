@@ -1,0 +1,8 @@
+找出杀软注册表启动项导出后删除，然后在第一次进桌面时调用，第二次重启进桌面杀软就会自动启动了
+以QQ电脑管家为例：
+在HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run处有QQPCTray注册表项
+(为管家启动项)，导出它然后删除该键。
+在HKLM\SYSTEM\ControlSet001\services处有QQPCRTP注册表项(为管家服务项),导出它然后删除该键
+然后把上面两个键合并到同一个注册表文件中，第一次进桌面调用即可当您第二次重启进桌面的时
+就会自动启动了。
+其他杀软可以参照此例

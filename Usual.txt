@@ -1,0 +1,7 @@
+date	查看修改日期
+time	查看修改时间
+ver	查看系统版本
+type	查看文本文件
+ren、rename	重命名文件
+diskcopy	复制整个磁盘
+netstat		显示TCP/IP连接

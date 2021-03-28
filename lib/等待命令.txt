@@ -1,0 +1,16 @@
+@echo off 
+start cmd
+echo wscript.sleep 10000>sleep.vbs
+sleep.vbs
+start  explorer.exe
+del sleep.vbs
+
+TIMEOUT /T 15 /NOBREAK
+
+for /l %%a in (
+15,-1,0
+) do (
+echo 哈哈%%a 秒后继续...
+ping -n 2 localhost 1>nul 2>nul
+cls
+)

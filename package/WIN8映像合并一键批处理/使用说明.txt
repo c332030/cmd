@@ -1,0 +1,32 @@
+一、操作环境
+
+32位WIN8映像合并，应在32位的WIN8系统平台上进行。
+64位WIN8映像合并，应在64位的WIN8系统平台上进行。
+
+如果系统平台是WIN7 SP1版本，应当安装Windows 8 评估和部署工具包 (ADK) 中第二项，并将一键批处理文件放在:
+64位系统：Program Files (x86)\Windows Kits\8.0\Assessment and Deployment Kit\Deployment Tools\amd64\dism目录下运行
+32位系统：Program Files\Windows Kits\8.0\Assessment and Deployment Kit\Deployment Tools\x86\dism目录下运行
+
+其他系统能否使用，未知。
+
+二、所需目录要求请细看批处理开头部分的说明，可以协助你一键处理打包成ISO。
+
+WIN8 X86合集制作批处理.cmd  －－－－－－－－－－>  制作8个32位版本合集
+WIN8 X64合集制作批处理.cmd  －－－－－－－－－－>  制作8个64位版本合集（图）
+
+三、如果你需要32位与64位大合并。可以使用提供的“X86_X64合一批处理.cmd”。合并好的install.wim应放在32位ISO文件sources中。install.wim能否放在64位的ISO文件中，情况未知，目前为止未用过32位的WIN8，原谅本人的无知。
+
+四、批处理包可以自动生成WIN8 媒体中心版本。
+
+五、批处理可以自动添加启用内置管理员Administrator的版本，实现自动登录系统。特别说明，内置管理员Administrator使用APPS受限，组策略里可以开启，但权限又会下降。
+
+六、本批处理大量使用新的DISM工具，并配合9200版本的IMAGEX（协助映像命名），可供映像合并处理时参考。
+
+七、$OEM$包中有unattend.xml，可以实现内置管理员自动登录，并留有不同安装阶段的CMD和EXE调用接口。
+
+希望你喜欢！enjoy!
+
+http://zxkh19501.blog.163.com/
+
+无约而来 2012.8.26
+

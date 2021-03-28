@@ -1,0 +1,14 @@
+%systemroot%\system32\chkntfs /t:2
+bcdedit /timeout 3
+powercfg -h off
+
+sc config   RemoteRegistry start= DISABLED
+sc config   WerSvc start= DISABLED
+sc config   W32Time start= DISABLED
+sc config   MpsSvc start= DEMAND
+
+net stop RemoteRegistry
+net stop WerSvc
+net stop W32Time
+net stop MpsSvc
+DEL %0

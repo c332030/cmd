@@ -1,0 +1,5 @@
+@Echo Off
+Set f=D:\Test1
+Rem 设置文件夹路径
+For /f "tokens=*" %%i in ('dir /os /b /s "%f%\*.txt"') do (If "%%~zi"=="0" (Del /q /f "%%i"))
+Pause

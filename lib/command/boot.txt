@@ -1,0 +1,9 @@
+bcdboot c:\windows /s c: /f bios
+
+:移除启动项
+bccdedit /displayorder xxx /remove
+
+bcdedit /timeout 3
+
+:中文 正在启动 Windows
+bcdedit /set {current} locale zh-CN

@@ -1,0 +1,6 @@
+REAgentC
+reagentc /info	是显示 Windows RE 和当前运行的系统或脱机的 Windows 7 映像上的任何可用恢复映像的当前状态。
+
+reagentc /enable
+
+reagentc /setosimage /path D:\Win7	指定Windows 7映像的位置

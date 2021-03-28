@@ -1,0 +1,2 @@
+netsh winsock reset
+重置 winsock 目录

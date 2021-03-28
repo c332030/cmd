@@ -1,0 +1,5 @@
+cacls "E:\System Volume Information" /e /g everyone:f
+
+icacls "F:\System Volume Information" /grant administrators:F /t
+
+takeown /f %windir%\winsxs\Backup

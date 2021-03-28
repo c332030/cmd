@@ -1,0 +1,24 @@
+ipconfig
+
+
+netstat -a 查看开启了哪些端口,常用netstat -an 
+
+netstat -n 查看端口的网络连接情况，常用netstat -an 
+
+netstat -v 查看正在进行的工作 
+
+netstat -p 协议名 例：netstat -p tcq/ip 查看某协议使用情况（查看tcp/ip协议使用情况） 
+
+netstat -s 查看正在使用的所有协议使用情况 
+
+nbtstat -A ip 对方136到139其中一个端口开了的话，就可查看对方最近登陆的用户名（03前的为用户名）-注意：参数-A要大写
+
+
+读写ini
+
+rasphone.exe -d "宽带连接"
+
+
+rasdial 宽带连接,73020016564@card,etsejt3p
+
+RasSetEntryProperties()和RasDial()

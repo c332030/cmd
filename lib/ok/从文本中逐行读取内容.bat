@@ -1,0 +1,17 @@
+@echo off&setlocal enabledelayedexpansion
+
+
+set n=0
+
+
+for /f "delims=" %%i in (Grammar.txt) do (
+
+set /a n+=1
+
+set T!n!=%%i
+
+) 
+
+echo !T1! !T2! !T3! !T4! !T5!
+
+pause

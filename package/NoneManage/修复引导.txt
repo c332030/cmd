@@ -1,0 +1,5 @@
+set /p A=请输入Windows所在盘符：
+echo.
+set /p B=请输入引导文件所在盘符：
+echo.
+bcdboot %A%:\windows /s %B%: /f all /l zh-cn

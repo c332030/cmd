@@ -1,0 +1,14 @@
+配置
+netsh wlan set hostednetwork mode=allow ssid=z580 key=123456
+netsh wlan set hostednetwork mode=disallow
+
+
+SSID:CMCC	PIN:123456
+
+
+使用
+netsh wlan start hostednetwork
+netsh wlan stop hostednetwork
+
+卸载
+netsh wlan set hostednetwork mode=disallow

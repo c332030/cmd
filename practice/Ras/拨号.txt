@@ -1,0 +1,3 @@
+%appdata%\Microsoft\Network\Connections\Pbk\rasphone.pbk
+
+rasdial ¿í´ø²¦ºÅ pop 123456 /phonebook:E:\bak\rasphone.pbk

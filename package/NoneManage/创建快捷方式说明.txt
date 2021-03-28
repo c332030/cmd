@@ -1,0 +1,2 @@
+@echo off
+mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\分区助手.lnk（快捷方式地址及名称）""):b.TargetPath=""%~dp0PartAssist\PartAssist.exe（文件位置，此处为当前位置下一目录）"":b.WorkingDirectory=""%~dp0"":b.Save:close")

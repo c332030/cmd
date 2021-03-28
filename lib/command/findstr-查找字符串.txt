@@ -1,0 +1,3 @@
+findstr /v "RTMFPP2PDisable" 1.tmp >> 1.cfg
+
+/v 只打印不包含匹配项的行

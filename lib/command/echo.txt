@@ -1,0 +1,11 @@
+echo 123
+
+实质为：
+echo 123 1>con 2>con
+
+con为控制台
+
+echo hero 3>hero.txt 1<&3
+
+3>hero	句柄代号 3 的指向由“空”变为 haro.txt
+1<&3	把句柄代号 3 的指向复制给 1 的指向，此时 1 的指向就为 hero.txt

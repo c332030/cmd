@@ -1,0 +1,1 @@
+mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\·ÖÇøÖúÊÖ.lnk""):b.TargetPath=""%~dp0PartAssist\PartAssist.exe"":b.WorkingDirectory=""%~dp0"":b.Save:close")

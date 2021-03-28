@@ -1,0 +1,1 @@
+结束进程，类似于 taskkill ，但结束 explorer 时，explorer 会自动启动

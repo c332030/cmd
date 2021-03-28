@@ -1,0 +1,3 @@
+reg add "" /v "" /t REG_SZ /d "" /f
+
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment" /v "Path" /t REG_EXPAND_SZ /d ^%D:\Program^% /f

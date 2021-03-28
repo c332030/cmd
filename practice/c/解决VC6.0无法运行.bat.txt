@@ -1,0 +1,18 @@
+@echo off
+
+echo.
+echo ���������������δ���İ�װλ�ð�װ��VC6.0���簲װλ�ñ����ģ����ֶ��ļ�����
+echo.
+
+pause
+
+rename "%systemdrive%\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin\MSDEV.EXE" MSDEV3.EXE
+
+reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /f /v "%systemdrive%\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin\MSDEV3.EXE" /t REG_SZ /d "WINXPSP2"
+
+del /f /q "C:\Users\Public\Desktop\Visual C++ 6.0.lnk"
+del /f /q "%userprofile%\Desktop\Visual C++ 6.0.lnk"
+
+mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\Visual C++ 6.0.lnk""):b.TargetPath=""%systemdrive%\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin\MSDEV3.EXE"":b.WorkingDirectory=""%~dp0"":b.Save:close")
+
+del /f /q  "%systemdrive%\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual C++ 6.0��������ɫ�棩\Visual C++ 6.0��������ɫ�棩.lnk"

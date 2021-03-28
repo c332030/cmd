@@ -1,0 +1,3 @@
+7z分卷合并
+
+copy /b abc.7z.* abc.7z

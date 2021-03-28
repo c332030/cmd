@@ -1,0 +1,7 @@
+﻿reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v PagingFiles /t REG_MULTI_SZ /d "D:\\pagefile.sys 16 8192" /f
+
+设置虚拟内存，需要重启才能删除
+wmic PageFileSet create name="D:\\pagefile.sys",InitialSize="16",MaximumSize="8192"
+
+删除虚拟内存
+wmic PageFileSet where name="D:\\pagefile.sys" delete

@@ -1,0 +1,66 @@
+%Path%	exe文件路径
+
+%time%	时间
+%date%	日期
+
+
+%MYFILES%	当前位置
+
+
+%userprofile%	当前用户账户
+%AppData%	当前用户账户\AppData\Roaming
+%Tmp%		C:\Users\ADMINI~1\AppData\Local\Temp
+
+C:\Users\ADMINI~1\AppData\	未知
+
+
+%SOURCE%	安装盘/安装光盘所在的盘符，适用于Windows XP以及较新的版本
+
+%SystemDrive%	安装Windows的系统盘符
+
+%SystemRoot%	Windows文件夹
+
+%WinDir%	Windows文件夹
+
+%ProgramFiles%		Program Files文件夹路径
+%ProgramFiles(x86)%	Program Files(x86)文件夹路径
+
+
+
+KuGou*	kugou123，kugou1、、、del taskkill
+
+
+set hour=%time:~0,2%
+set min=%time:~3,2%
+
+%appdata%\Microsoft\Network\Connections\Pbk\rasphone.pbk
+
+
+32位,64位系统判断
+%processor_architecture%
+%PROCESSOR_IDENTIFIER%
+
+
+
+
+progr~1
+
+命令行中使用带空格的路径会可能导致错误，所以一般有两个解决方案：
+
+1. 使用引号将路径“包裹”起来，作为一个整体
+2. 使用“~”来代表这个路径的简写；
+如果有多个以上特点的文件夹的时候，~后面接上数字，表示第几个符合该简写规则的文件夹！
+
+
+简写是有其约束的
+1. 文件夹名称中有空格
+2. 文件夹名称的长度必须大于6
+3. 和2有关系，~前面的字母数量必须等于6，也就是必须符合这样的简写“xxxxxx~数字”
+
+
+例子：
+我建立了如下几个文件夹：
+111 1111 // 简写为：111111~1【注意】这条，也是符合规定的
+111111 11 // 简写为：111111~2
+111111 s // 简写为：111111~3
+111111 s - 副本 // 简写为：111111~4

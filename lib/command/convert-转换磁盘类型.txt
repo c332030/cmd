@@ -1,0 +1,3 @@
+convert c:/fs:ntfs
+
+转换 C 盘格式为 NTFS

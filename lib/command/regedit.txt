@@ -1,0 +1,8 @@
+regedit 的命令行参数
+filename      导入 .reg 文件进注册表
+/s            导入 .reg 文件进注册表（安静模式）
+/e            导出注册表文件
+              例：regedit /e filename.reg HKEY_LOCAL_MACHINE\SYSTEM
+/L:system     指定 system.dat
+/R:user       指定 user.dat
+/C            压缩 [文件名] (Windows 98)

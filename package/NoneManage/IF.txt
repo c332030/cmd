@@ -1,0 +1,7 @@
+rem 判断64位系统和32位系统
+if /i %PROCESSOR_IDENTIFIER:~0,3%==x86 (
+	echo 32位操作系统
+) else (
+	echo 64位操作系统
+)
+pause

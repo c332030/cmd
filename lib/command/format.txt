@@ -1,0 +1,5 @@
+format C: /fs:ntfs
+
+/y	不提示用户
+/fs:ntfs	指明格式化后的文件系统
+/q	快速格式化

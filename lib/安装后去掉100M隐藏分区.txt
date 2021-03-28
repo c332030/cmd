@@ -1,0 +1,79 @@
+cmd	bcdedit 查看系统启动项
+
+
+Windows 启动管理器
+--------------------
+标识符                  {bootmgr}
+device                  partition=C:
+description             Windows Boot Manager
+locale                  zh-CN
+inherit                 {globalsettings}
+default                 {current}
+resumeobject            {2602f4bf-c27f-11e5-bcd9-801fa067e11d}
+displayorder            {current}
+toolsdisplayorder       {memdiag}
+timeout                 3
+
+Windows 启动加载器
+-------------------
+标识符                  {current}
+device                  partition=C:
+path                    \Windows\system32\winload.exe
+description             Windows 7
+locale                  zh-CN
+inherit                 {bootloadersettings}
+osdevice                partition=C:
+systemroot              \Windows
+resumeobject            {2602f4bf-c27f-11e5-bcd9-801fa067e11d}
+nx                      OptIn
+
+
+cmd	diskpart 启用硬盘工具命令
+list disk
+
+select disk 0 	选择硬盘
+
+list partition
+
+
+select partition 1	选择分区1 
+ 
+inactive	将100MB 分区标记为不活动，即不在开机启动
+ 
+select partition 2	选择分区2，安装系统的分区
+ 
+detail partition	将此硬盘标记为启动 
+ 
+active		将分区标记为活动，将安装系统的分区标记为活动 
+ 
+exit 
+ 
+修复引导
+bcdboot c:\Windows /s c:
+
+/s 将 c:\Windows 启动文件复制到 C:
+
+
+
+
+Microsoft DiskPart 版本 6.1.7601
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: WIN-01601241750
+
+DISKPART> 
+  磁盘 ###  状态           大小     可用     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  磁盘 0    联机              119 GB  1024 KB         
+  磁盘 1    联机              931 GB    42 MB         
+
+DISKPART> 
+磁盘 0 现在是所选磁盘。
+
+DISKPART> 
+  分区 ###       类型              大小     偏移量
+  -------------  ----------------  -------  -------
+  分区      1    主要                  35 GB  1024 KB
+  分区      0    扩展的                 84 GB    35 GB
+  分区      2    逻辑                  84 GB    35 GB
+
+DISKPART> 
