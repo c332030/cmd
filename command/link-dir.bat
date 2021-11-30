@@ -1,12 +1,13 @@
 @echo off
 
-::set name=common-constant-ts
-::call script\link-dir-prompt.cmd
+set app_name=Android
 
-::set source=%~dp0..\..\%name%
-::set target=%~dp0..\node_modules\%name%
+set target="%userprofile%\AppData\Local\%app_name%"
+set source="%~dp0app"
+call link-dir-prompt.bat
 
-set target="%userprofile%\.vscode"
+set target="%userprofile%\AppData\Roaming\%app_name%"
 set source="%~dp0data"
+call link-dir-prompt.bat
 
-call link-dir-prompt.cmd
+pause >nul
