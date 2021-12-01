@@ -1,13 +1,19 @@
 @echo off
 
 if not defined source (
+  set existSource="false"
   echo.
   set /p source=请输入源目录：
+) else (
+  set existSource="true"
 )
 
 if not defined target (
+  set existTarget="false"
   echo.
   set /p target=请输入目标目录：
+) else (
+  set existTarget="true"
 )
 
 if not exist %source% (
@@ -26,4 +32,16 @@ rd /s /q %target%
 echo.
 mklink /d %target% %source%
 
-pause >nul
+set skipParse=true
+
+if false==%existSource% (
+  skipParse=false
+)
+if false==%existTarget% (
+  skipParse=false
+)
+
+if false==%skipParse% (
+  pause >nul
+)
+
