@@ -1,6 +1,3 @@
-#
-# https://help.github.com/articles/dealing-with-line-endings/
-#
-# These are explicitly windows files and should use crlf
+*.reg           text working-tree-encoding=UTF-8 eol=crlf
 *.bat           text working-tree-encoding=UTF-8 eol=crlf
 *.vbs           text working-tree-encoding=UTF-8 eol=crlf
