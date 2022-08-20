@@ -1,0 +1,4 @@
+
+= dism
+
+. `dism /online /cleanup-image /startcomponentcleanup`
