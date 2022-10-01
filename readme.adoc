@@ -1,0 +1,8 @@
+
+= cmd
+
+use utf-8
+[source, shell]
+----
+chcp 65001 > nul
+----
