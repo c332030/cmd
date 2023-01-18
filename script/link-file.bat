@@ -1,10 +1,30 @@
 @echo off
 
-set targetFileName="KeyManager.kmdb"
+if not defined targetFileName (
+  set existTargetFileName="false"
+  echo.
+  set /p targetFileName=请输入源文件名：
+) else (
+  set existTargetFileName="true"
+)
+
 set sourceFileName=%targetFileName%
 
-set target="%userprofile%\AppData\Roaming\keymanager"
-set source="%~dp0data"
+if not defined source (
+  set existSource="false"
+  echo.
+  set /p source=请输入源文件路径：
+) else (
+  set existSource="true"
+)
+
+if not defined target (
+  set existSource="false"
+  echo.
+  set /p source=请输入目标文件路径：
+) else (
+  set existSource="true"
+)
 
 if not exist %source%\%sourceFileName% (
   echo.
@@ -20,6 +40,20 @@ if exist %target%\%targetFileName% (
 )
 
 echo.
-mklink /h %target%\%targetFileName% %source%\%sourceFileName%
+mklink %target%\%targetFileName% %source%\%sourceFileName%
 
-pause >nul
+set skipParse=true
+
+if false==%existTargetFileName% (
+  skipParse=false
+)
+if false==%existSource% (
+  skipParse=false
+)
+if false==%existTarget% (
+  skipParse=false
+)
+
+if false==%skipParse% (
+  pause >nul
+)
