@@ -6,8 +6,11 @@ setlocal
 
 set current_path=%~dp0
 
-call %current_path%\link-file.bat link-dir.bat %current_path% %windir%
+set from=%current_path%
+set to=%windir%
 
-call %current_path%\link-file.bat link-file.bat %current_path% %windir%
+call %current_path%\link-file.bat link-dir.bat %from% %to%
+
+call %current_path%\link-file.bat link-file.bat %from% %to%
 
 endlocal
