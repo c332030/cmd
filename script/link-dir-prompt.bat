@@ -1,6 +1,6 @@
 @echo off
 
-chcp 65001 >nul
+%utf8%
 
 set source=%1
 set target=%2

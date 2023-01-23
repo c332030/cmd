@@ -1,6 +1,6 @@
 @echo off
 
-chcp 65001 >nul
+%utf8%
 
 set app_name=Android
 
