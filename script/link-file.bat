@@ -1,5 +1,10 @@
 @echo off
 
+set targetFileName=%1
+
+set source=%2
+set target=%3
+
 if not defined targetFileName (
   set existTargetFileName="false"
   echo.

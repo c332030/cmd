@@ -1,5 +1,8 @@
 @echo off
 
+set source=%1
+set target=%2
+
 if not defined source (
   set existSource="false"
   echo.
