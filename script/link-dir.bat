@@ -1,5 +1,7 @@
 @echo off
 
+setlocal
+
 %utf8%
 
 set source=%1
@@ -49,3 +51,5 @@ if false==%existTarget% (
 if false==%skipParse% (
   pause >nul
 )
+
+endlocal

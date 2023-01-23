@@ -1,5 +1,7 @@
 @echo off
 
+setlocal
+
 %utf8%
 
 set targetFileName=%1
@@ -64,3 +66,5 @@ if false==%existTarget% (
 if false==%skipParse% (
   pause >nul
 )
+
+endlocal

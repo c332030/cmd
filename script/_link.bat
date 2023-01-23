@@ -1,8 +1,8 @@
 @echo off
 
-%utf8%
-
 setlocal
+
+%utf8%
 
 set current_path=%~dp0
 
