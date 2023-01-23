@@ -1,5 +1,7 @@
 @echo off
 
+chcp 65001 >nul
+
 set source=%1
 set target=%2
 

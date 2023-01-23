@@ -1,5 +1,7 @@
 @echo off
 
+chcp 65001 >nul
+
 set targetFileName=%1
 
 set source=%2

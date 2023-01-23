@@ -1,5 +1,7 @@
 @echo off
 
+chcp 65001 >nul
+
 set app_name=Android
 
 set target="%userprofile%\AppData\Local\%app_name%"
