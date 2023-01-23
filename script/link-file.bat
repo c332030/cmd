@@ -26,11 +26,11 @@ if not defined source (
 )
 
 if not defined target (
-  set existSource="false"
+  set existTarget="false"
   echo.
-  set /p source=请输入目标文件路径：
+  set /p target=请输入目标文件路径：
 ) else (
-  set existSource="true"
+  set existTarget="true"
 )
 
 if not exist %source%\%sourceFileName% (
