@@ -2,8 +2,6 @@
 
 setlocal
 
-%utf8%
-
 set targetFileName=%1
 
 set source=%2
