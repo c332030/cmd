@@ -1,7 +1,5 @@
 @echo off
 
-setlocal
-
 set targetFileName=%1
 
 set source=%2
@@ -64,5 +62,3 @@ if false==%existTarget% (
 if false==%skipParse% (
   pause >nul
 )
-
-endlocal
